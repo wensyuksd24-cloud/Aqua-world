@@ -168,11 +168,11 @@ body{font-family:'Quicksand',sans-serif;background:var(--deep);color:var(--text)
     
     </head>
 <body>  
-<div id="authScreen" style="background-image:url('{LOGIN_BG}'); position: relative; z-index: 10000;">  <div class="auth-box">
+<div id="authScreen" style="background-image:url('{LOGIN_BG}'); pointer-events: auto !important; position: relative; z-index: 9999;">position: relative; z-index: 10000;">  <div class="auth-box">
     <div class="auth-logo"><img class="auth-fish-img" src="{AV_NEMO}" alt><h1>AQUA WORLD</h1></div>
     <div class="tabs">
       <button class="tab-btn active" onclick="switchTab('login')">GİRİŞ YAP</button>
-      <button class="tab-btn" onclick="switchTab('register')">KAYIT OL</button>
+      <button class="tab-btn" onclick="console.log('Tıklandı!'); switchTab('register')">KAYIT OL</button>
     </div>
     <div id="loginForm">
       <input class="auth-input" id="lUser" placeholder="Kullanıcı Adı" type="text" autocomplete="username">
