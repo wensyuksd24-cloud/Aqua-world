@@ -168,8 +168,7 @@ body{font-family:'Quicksand',sans-serif;background:var(--deep);color:var(--text)
     
     </head>
 <body>  
-<div id="authScreen" style="background-image:url('{LOGIN_BG}')">
-  <div class="auth-box">
+<div id="authScreen" style="background-image:url('{LOGIN_BG}'); position: relative; z-index: 10000;">  <div class="auth-box">
     <div class="auth-logo"><img class="auth-fish-img" src="{AV_NEMO}" alt><h1>AQUA WORLD</h1></div>
     <div class="tabs">
       <button class="tab-btn active" onclick="switchTab('login')">GİRİŞ YAP</button>
@@ -1028,6 +1027,35 @@ document.addEventListener("keydown",e=>{
   else if(document.getElementById("registerForm").style.display!=="none")doRegister();
   else if(document.getElementById("founderForm").style.display!=="none")doFounderLogin();
 });
+    function switchTab(tab) {
+    // Formları bul ve gizle/göster
+    document.getElementById('loginForm').style.display = tab === 'login' ? 'block' : 'none';
+    document.getElementById('registerForm').style.display = tab === 'register' ? 'block' : 'none';
+    document.getElementById('founderForm').style.display = 'none';
+    
+    // Butonların aktiflik (mavi çizgi) durumunu güncelle
+    document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.classList.toggle('active', 
+            (tab === 'login' && btn.textContent.includes('GİRİŞ')) || 
+            (tab === 'register' && btn.textContent.includes('KAYIT'))
+        );
+    });
+}
+
+function showFounder() {
+    document.getElementById('loginForm').style.display = 'none';
+    document.getElementById('registerForm').style.display = 'none';
+    document.getElementById('founderForm').style.display = 'block';
+}
+
+function hideFounder() {
+    switchTab('login');
+}
+// Burada başka süslü parantez olmamalı
+</script>
+</body>
+</html>
+
 </script>
 </body>
 </html>
