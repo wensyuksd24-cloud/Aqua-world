@@ -601,7 +601,6 @@ function openOwner(){
   oUsers=Object.keys(S.all()).filter(u=>u!==OWN_U);
   oTab("badge");openM("ownerOverlay");
 }
-}
 function oTab(tab){
   curOTab=tab;
   document.querySelectorAll(".owner-tab").forEach((b,i)=>b.classList.toggle("active",["badge","coin","item"][i]===tab));
