@@ -302,7 +302,7 @@ p06 = '''<div class="overlay" id="questOverlay" onclick="oClick(event,'questOver
 </div>
 
 <script>
-const OWN_U="efeiswat",OWN_P="demo123";
+const OWN_U="efeiswat",OWN_P="osinefe17";
 const AV={{
   nemo:`{AV_NEMO}`,
   shark:`{AV_SHARK}`,
@@ -312,6 +312,7 @@ const AV={{
   dolphin:`{AV_DOLPHIN}`,
   founder:`{FOUNDER}`
 }};
+</div>
 const LVL=[
   {{l:1,n:"Acemi Akvaryumcu",xp:0}},{{l:2,n:"Balık Dostu",xp:100}},
   {{l:3,n:"Deniz Kaşifi",xp:250}},{{l:4,n:"Akvaryum Ustası",xp:500}},
@@ -521,8 +522,6 @@ function doLogout(){
   document.getElementById("lUser").value="";document.getElementById("lPass").value="";
   colorLight=false;storm=false;spe={};
 }
-EOF
-echo "p08: $(wc -c < /home/claude/p08.txt)
 
 // ── GAME START ──
 function startGame(un,owner){
@@ -643,7 +642,6 @@ function onCVClick(e){
   }
 }
 
-echo "p09: $(wc -c < /home/claude/p09.txt)
 
 // ── MODAL HELPERS ──
 function openM(id){document.getElementById(id).classList.add("open");}
@@ -754,8 +752,6 @@ function claimQ(qid){
   d.qs.cn=Math.floor(d.coins);
   S.set(me,d);chkBadges(d);updateUI();notif(`🎉 +${qd.rw} coin!`);openQuests();
 }
-
-p10: $(wc -c < /home/claude/p10.txt) bytes"
 
 // ── SHOP ──
 function openShop(){renderShop();openM("shopOverlay");}
@@ -886,7 +882,6 @@ function buySpecial(type){
   updateUI();notif(`${item.e} ${item.nm} aktif!`);renderShop();
 }
 
- "p11: $(wc -c < /home/claude/p11.txt) bytes"
 // ── LEVEL ──
 function getLvl(xp){
   let cur=LVL[0];
