@@ -32,6 +32,8 @@ body{font-family:'Quicksand',sans-serif;background:var(--deep);color:var(--text)
 .auth-msg{font-size:12px;text-align:center;margin-top:8px;min-height:16px;}
 .auth-msg.err{color:var(--coral);}.auth-msg.ok{color:var(--accent2);}
 .dev-tag{text-align:center;font-size:11px;color:rgba(200,240,255,0.18);margin-top:12px;}
+<div id="authScreen" style="background-image:url('{LOGIN_BG}'); pointer-events: auto !important; position: relative; z-index: 10000;">
+ 
 /* Avatar picker */
 .av-pick-title{font-size:11px;color:var(--accent);letter-spacing:1px;text-align:center;margin-bottom:7px;font-weight:700;}
 .avatar-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin-bottom:11px;}
@@ -683,6 +685,14 @@ document.addEventListener("keydown",e=>{
   else if(document.getElementById("registerForm").style.display!=="none")doRegister();
   else if(document.getElementById("founderForm").style.display!=="none")doFounderLogin();
 });
+  }); // keydown dinleyicisini kapatır
+
+updateUI();
+setWx();
+</script>
+</body>
+</html>
+                                                                                                                                                                                      
 </script>
 </body>
 </html>
